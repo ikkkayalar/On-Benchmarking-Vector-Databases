@@ -42,8 +42,8 @@ ground_truth_path = '../../data/sift_1m_groundtruth_COSINE.pkl'
 
 # Track completed experiments
 completed_experiments = set()
-if os.path.exists('qdrant_ann_sift_results_cos.csv'):
-    with open('qdrant_ann_sift_results_cos.csv', 'r') as file:
+if os.path.exists('results/qdrant_ann_sift_results_cos.csv'):
+    with open('results/qdrant_ann_sift_results_cos.csv', 'r') as file:
         reader = csv.reader(file)
         next(reader)  # Skip header
         for row in reader:
@@ -141,7 +141,7 @@ with tqdm(total=total_iterations, desc="Experiment Progress") as pbar:
                     qps = len(query_vectors) / search_time
 
                     # Log results
-                    with open('qdrant_ann_sift_results_cos.csv', 'a', newline='') as file:
+                    with open('results/qdrant_ann_sift_results_cos.csv', 'a', newline='') as file:
                         writer = csv.writer(file)
                         if file.tell() == 0:
                             writer.writerow(['M', 'Ef Construct', 'Limit', 'Ef Search',
