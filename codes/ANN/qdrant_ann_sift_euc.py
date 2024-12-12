@@ -29,7 +29,7 @@ print('Data loaded.')
 client = QdrantClient(url="http://localhost:6922", timeout=10000000)
 collection_name = "trial_euclid"
 vector_size = 128
-batch_size = 10000
+batch_size = 1000
 
 # Experiment configuration
 distance_metric = Distance.EUCLID
