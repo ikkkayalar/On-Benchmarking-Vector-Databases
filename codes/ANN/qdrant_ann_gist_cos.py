@@ -40,7 +40,7 @@ ground_truth_path = '../../data/ground_truth_cosine_gist.pkl'
 
 # Track completed experiments
 completed_experiments = set()
-if os.path.exists('qdrant_ann_gist_results_cosine.csv'):
+if os.path.exists('results/qdrant_ann_gist_results_cosine.csv'):
     with open('qdrant_ann_gist_results_cosine.csv', 'r') as file:
         reader = csv.reader(file)
         next(reader)  # Skip header
