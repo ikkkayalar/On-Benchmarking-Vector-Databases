@@ -40,8 +40,8 @@ ground_truth_path = '../../data/ground_truth_dot_gist.pkl'
 
 # Track completed experiments
 completed_experiments = set()
-if os.path.exists('qdrant_ann_gist_results_dot.csv'):
-    with open('qdrant_ann_gist_results_dot.csv', 'r') as file:
+if os.path.exists('results/qdrant_ann_gist_results_dot.csv'):
+    with open('results/qdrant_ann_gist_results_dot.csv', 'r') as file:
         reader = csv.reader(file)
         next(reader)  # Skip header
         for row in reader:
@@ -139,7 +139,7 @@ with tqdm(total=total_iterations, desc="Experiment Progress") as pbar:
                     qps = len(query_vectors) / search_time
 
                     # Log results
-                    with open('qdrant_ann_gist_results_dot.csv', 'a', newline='') as file:
+                    with open('results/qdrant_ann_gist_results_dot.csv', 'a', newline='') as file:
                         writer = csv.writer(file)
                         if file.tell() == 0:
                             writer.writerow(['M', 'Ef Construct', 'Limit', 'Ef Search',
