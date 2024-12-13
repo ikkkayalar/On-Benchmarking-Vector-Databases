@@ -14,8 +14,8 @@ def fvecs_read(fname):
     return a.reshape(-1, d + 1)[:, 1:].view('float32')  # Reshape and convert to float32
 
 # Read vectors from the uploaded files
-base_vectors = fvecs_read('../../data/sift_base_1m.fvecs')
-query_vectors = fvecs_read('../../data/sift_query_1m.fvecs')
+base_vectors = fvecs_read('../../data/sift_base.fvecs')
+query_vectors = fvecs_read('../../data/sift_query.fvecs')
 
 # Function to load vectors from a pickle file
 def load_vectors_from_pickle(file_path):
