@@ -11,7 +11,7 @@ container_port=$(docker port "$container_id" | grep "tcp" | awk '{print $NF}' | 
 cp .env .env.bk
 echo "QDRANT_PORT=\"$container_port\"" >> .env
 
-python3.10 qdrant_ann_sift_euc.py &
+python3 qdrant_ann_sift_euc.py &
 
 python_pid=$!
 
