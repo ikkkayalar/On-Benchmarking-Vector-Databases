@@ -15,7 +15,7 @@ cp .env .env.bk
 echo "QDRANT_PORT=\"$container_port\"" >> .env
 
 # Start Python script
-python3 qdrant_ann_gist_cos.py &
+python3 qdrant_ann_sift_dot.py &
 python_pid=$!
 
 # Save Docker stats to a file
