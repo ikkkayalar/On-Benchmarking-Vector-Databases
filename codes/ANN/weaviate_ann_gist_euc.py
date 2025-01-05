@@ -15,8 +15,8 @@ def load_vectors_from_pickle(file_path):
 
 # Load the base and query vectors
 
-base_vectors = list(fvecs_read('../../data/base_vectors_gist.pkl'))
-query_vectors = list(fvecs_read('../../data/query_vectors_gist.pkl'))
+base_vectors = list(load_vectors_from_pickle('../../data/base_vectors_gist.pkl'))
+query_vectors = list(load_vectors_from_pickle('../../data/query_vectors_gist.pkl'))
 
 ground_truth_path = '../../data/ground_truth_euclidean_gist.pkl'
 
